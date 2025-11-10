@@ -82,12 +82,12 @@ Y agregá al final:
 ```cron
 DISPLAY=:0
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
-0 4 */3 * * /home/klap/syscron/system-maintance.sh >> /var/log/system-maintenance.log 2>&1
+0 4 */3 * * /home/user/syscron/system-maintance.sh >> /var/log/system-maintenance.log 2>&1
 ```
 
 📌 **Notas importantes:**
 - `DISPLAY=:0` y `DBUS_SESSION_BUS_ADDRESS=...` permiten enviar notificaciones al escritorio.  
-- `1000` corresponde al UID del usuario principal (ver con `id -u klap`).
+- `1000` corresponde al UID del usuario principal (ver con `id -u $user`).
 
 ---
 
